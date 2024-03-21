@@ -15,7 +15,7 @@ jobs:
       - name: Set up Azure CLI
         uses: azure/cli@v2
         with:
-          az-version: latest
+          azcliversion: latest
 
       - name: Install kubectl
         run: |
