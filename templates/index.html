@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Frontend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Simple Frontend</h1>
+    <div id="message"></div>
+
+    <button onclick="getMessage()">Get Message</button>
+
+    <script>
+        function getMessage() {
+            fetch('/get')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').innerText = data.message;
+            });
+        }
+    </script>
+</body>
+</html>

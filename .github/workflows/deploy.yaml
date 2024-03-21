@@ -22,8 +22,8 @@ jobs:
         run: |
           docker build -t wmezz/backend-app .
           docker login -u wmezz -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag wmezz/backend-app wmezz/backend-app:v2
-          docker push wmezz/backend-app:v2
+          docker tag wmezz/backend-app wmezz/backend-app:v3
+          docker push wmezz/backend-app:v3
 
       - name: Apply Kubernetes files
         run: |
