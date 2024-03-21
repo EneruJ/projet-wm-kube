@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Azure CLI
-        uses: azure/setup-azure-cli@v1
+        uses: azure/setup-azure-cli@v2
         with:
           az-version: latest
 
@@ -27,7 +27,7 @@ jobs:
 
       - name: Azure Login and AKS Set Context
         run: |
-          az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }} 
+          az login 
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           az aks get-credentials --resource-group hitema_kube --name hitema --overwrite-existing
 
