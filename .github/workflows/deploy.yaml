@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Azure CLI
-        uses: azure/setup-azure-cli@v2
+        uses: azure/cli@v2
         with:
           az-version: latest
 
