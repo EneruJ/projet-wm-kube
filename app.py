@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/get', methods=['GET'])
 def get_endpoint():
-    return 'GET endpoint called'
+    return 'GET endpoint called HIHI'
 
 @app.route('/post', methods=['POST'])
 def post_endpoint():
