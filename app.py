@@ -1,10 +1,11 @@
-from flask import Flask, request
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 @app.route('/get', methods=['GET'])
 def get_endpoint():
-    return 'GET endpoint called HIHI'
+    ip = request.host.split(':')[0]
+    return jsonify({"message": "Hello World!", "server_ip": ip})
 
 @app.route('/post', methods=['POST'])
 def post_endpoint():
