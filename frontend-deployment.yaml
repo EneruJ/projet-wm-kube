@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: wmezz/frontend-app:v4
+        image: wmezz/frontend-app:v5
         ports:
         - containerPort: 80
