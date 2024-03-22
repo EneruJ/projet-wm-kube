@@ -26,6 +26,10 @@ jobs:
           docker push wmezz/backend-app:v4
           docker-compose up -d
 
+      - name: Install MySQL Connector Python
+        run: |
+          pip install mysql-connector-python
+
       - name: Apply Kubernetes files
         run: |
           kubectl apply -f deployment.yaml
@@ -34,7 +38,4 @@ jobs:
           kubectl apply -f mysql-service.yaml
           kubectl apply -f mysql-pv.yaml
           kubectl apply -f mysql-pvc.yaml
-
-
-          
 
