@@ -17,3 +17,12 @@ spec:
         image: wmezz/backend-app:v3
         ports:
         - containerPort: 5000
+ 	env:
+        - name: MYSQL_HOST
+          value: mysql-service
+        - name: MYSQL_USER
+          value: root
+        - name: MYSQL_PASSWORD
+          value: password
+        - name: MYSQL_DATABASE
+          value: mydatabase
