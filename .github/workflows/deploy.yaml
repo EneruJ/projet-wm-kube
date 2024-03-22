@@ -29,7 +29,6 @@ jobs:
       - name: Install MySQL Connector Python
         run: |
           pip install mysql-connector-python
-          python add_data.py
 
       - name: Apply Kubernetes files
         run: |
@@ -39,4 +38,5 @@ jobs:
           kubectl apply -f mysql-service.yaml
           kubectl apply -f mysql-pv.yaml
           kubectl apply -f mysql-pvc.yaml
+          kubectl apply -f mysql-init-script.yaml
 
