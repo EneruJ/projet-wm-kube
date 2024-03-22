@@ -31,8 +31,8 @@ jobs:
           cd templates
           docker build -t wmezz/frontend-app .
           docker login -u wmezz -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag wmezz/frontend-app wmezz/frontend-app:v2
-          docker push wmezz/frontend-app:v2
+          docker tag wmezz/frontend-app wmezz/frontend-app:v3
+          docker push wmezz/frontend-app:v3
 
       - name: Install MySQL Connector Python
         run: |
