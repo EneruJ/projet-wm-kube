@@ -18,13 +18,21 @@ jobs:
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           az aks get-credentials --resource-group hitema_kube --name hitema --overwrite-existing
 
-      - name: Build Docker image
+      - name: Build Docker image for backend
         run: |
           docker build -t wmezz/backend-app .
           docker login -u wmezz -p ${{ secrets.DOCKER_PASSWORD }}
           docker tag wmezz/backend-app wmezz/backend-app:v6
           docker push wmezz/backend-app:v6
           docker-compose up -d
+
+      - name: Build Docker image for frontend
+        run: |
+          cd templates
+          docker build -t wmezz/frontend-app .
+          docker login -u wmezz -p ${{ secrets.DOCKER_PASSWORD }}
+          docker tag wmezz/frontend-app wmezz/frontend-app:v1
+          docker push wmezz/frontend-app:v1
 
       - name: Install MySQL Connector Python
         run: |
@@ -39,4 +47,6 @@ jobs:
           kubectl apply -f service.yaml
           kubectl apply -f mysql-pvc.yaml
           kubectl apply -f mysql-pv.yaml
+          kubectl apply -f frontend-deployment.yaml
+          kubectl apply -f frontend-service.yaml
 
