@@ -14,7 +14,7 @@
 
     <script>
         function getMessage() {
-            fetch('/users')
+            fetch('http://4.225.192.35/users')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('message').innerText = data.message;
