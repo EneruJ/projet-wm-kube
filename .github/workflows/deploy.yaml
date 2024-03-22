@@ -22,8 +22,8 @@ jobs:
         run: |
           docker build -t wmezz/backend-app .
           docker login -u wmezz -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag wmezz/backend-app wmezz/backend-app:v6
-          docker push wmezz/backend-app:v6
+          docker tag wmezz/backend-app wmezz/backend-app:v7
+          docker push wmezz/backend-app:v7
           docker-compose up -d
 
       - name: Build Docker image for frontend

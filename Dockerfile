@@ -6,6 +6,8 @@ RUN pip install mysql-connector-python
 # Installation de Flask
 RUN pip install flask
 
+RUN pip install Flask-CORS
+
 # Copie de l'application Python dans le conteneur
 COPY app.py /app/
 
