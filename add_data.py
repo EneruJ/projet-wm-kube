@@ -1,7 +1,7 @@
 import mysql.connector
 
 # Informations de connexion à MySQL
-mysql_host = "mysql-service-mezzache"  # Remplacez par l'adresse du service MySQL
+mysql_host = "10.0.36.81"  # Remplacez par l'adresse du service MySQL
 mysql_user = "root"  # Utilisateur MySQL
 mysql_password = "password"  # Mot de passe MySQL
 
