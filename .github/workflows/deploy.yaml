@@ -22,8 +22,8 @@ jobs:
         run: |
           docker build -t wmezz/backend-app .
           docker login -u wmezz -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag wmezz/backend-app wmezz/backend-app:v4
-          docker push wmezz/backend-app:v4
+          docker tag wmezz/backend-app wmezz/backend-app:v5
+          docker push wmezz/backend-app:v5
           docker-compose up -d
 
       - name: Install MySQL Connector Python

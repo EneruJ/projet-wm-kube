@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: wmezz/backend-app:v4
+        image: wmezz/backend-app:v5
         ports:
         - containerPort: 5000
         env:
