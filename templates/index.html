@@ -14,7 +14,7 @@
 
     <script>
         function getUsers() {
-            fetch('http://4.225.192.35/users')
+            fetch('http://backend-service-mezzache/users')
             .then(response => response.json())
             .then(data => {
                 let usersHTML = '';
