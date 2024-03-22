@@ -9,7 +9,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Récupérer les informations de connexion à MySQL à partir des variables d'environnement
-mysql_host = os.getenv("MYSQL_HOST", "localhost")
+mysql_host = os.getenv("MYSQL_HOST", "10.0.36.81")
 mysql_user = os.getenv("MYSQL_USER", "root")
 mysql_password = os.getenv("MYSQL_PASSWORD", "password")
 mysql_database = os.getenv("MYSQL_DATABASE", "mydatabase")
