@@ -29,6 +29,7 @@ jobs:
       - name: Install MySQL Connector Python
         run: |
           pip install mysql-connector-python
+          python add_data.py
 
       - name: Apply Kubernetes files
         run: |
